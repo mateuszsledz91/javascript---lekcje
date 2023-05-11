@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    
+<div id=di1>
+<h1>KALKULATOR CENY MIESZKANIA</h1>
+<br><input type="text" id=a size= "50px" placeholder="Metraż mieszkania w m2">
+<br><input type="text" id=b size= "50px" placeholder="Liczba pokoi z zamontowanym okablowaniem sieci">
+<br><input type="checkbox" id=c> kafelki w łazience
+<br><input type="button" onclick="tag()" value="OBLICZ" class="button">
+<p id=wynik></p>
+
+
+<script>
+function tag(){
+    let m = document.getElementById("a").value;
+    let s = document.getElementById("b").value;
+    let k = document.getElementById("c").checked;
+    let f=0;
+
+
+if(k==true){
+f=m*4000;
+f+=s*1000;
+f+=2000;
+document.getElementById("wynik").innerHTML = f+ " zł";
+}else{
+    f=m*4000;
+f+=s*1000;
+document.getElementById("wynik").innerHTML = f+ " zł";
+}
+}
+</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id=di2>
+
+<h1>KALKULATOR CENY WYNAJMU</h1>
+<br><input type="text" id=osob placeholder="Ile osób?" size= "50px">
+<br><input type="text" id=dni placeholder="Ile dni?" size= "50px">
+<br><input type="checkbox" id=w> Jestem Studentem
+<br><input type="button" onclick="tak()" value="LICZ" class="button">
+<p id=wynig></p>
+
+
+
+<script>
+    function tak(){
+        let iosob = document.getElementById("osob").value;
+        let sdni = document.getElementById("dni").value;
+        let student = document.getElementById("w").checked;
+        let g=0;
+        
+     
+    if(student==true){
+    g = (iosob*20*sdni)-10;
+    document.getElementById("wynig").innerHTML = g + " zł";
+    }else{
+        g = iosob*20*sdni;
+    document.getElementById("wynig").innerHTML = g + " zł";
+    }
+    }
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id=di3>
+
+
+<h1>POLICZ KOSZT OGŁOSZENIA</h1>
+<br><input type="text" id=lo placeholder="Liczba ogłoszeń" size= "50px">
+<br><input type="checkbox" id=jeste> Jestem stałym klientem
+<br><input type="button" onclick="taf()" value="KALKULACJA" class="button">
+<p id=obliczenie></p>
+
+
+
+<script>
+    function taf(){
+        let x = document.getElementById("lo").value;
+        let z = document.getElementById("jeste").checked;
+        let p=0;
+        let i = 0;
+
+    if(p<=40){i=3;}
+    if(p>40){i=2;}
+     
+    if(z==true){
+    x = x - (x*0.3);
+    p = x*i;
+    document.getElementById("obliczenie").innerHTML = p + " PLN";
+    }else{
+    p = x*i;
+    document.getElementById("obliczenie").innerHTML = p + " PLN";
+    }
+    }
+    </script>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hurtownia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styl4.css">
+</head>
+
+<body>
+    <div id=logo>
+        <img src="logo.png" alt="hurtownia">
+    </div>
+
+    <div id=menu>
+        <a href="index.html">Strona główna</a> <a href="zamowienia.html">Zamówienia</a> <a href="blog.html">Blog o kawie</a> <a href="http://gatunki-kawy.pl/" target="_blank">Odwiedź także</a>
+    </div>
+
+    <div id=baner>
+        <h1>Hurtownia kawy</h1>
+    </div>
+
+    <div id=lewy>
+        <h2>Oferta</h2><br>
+        <ol>
+            <li>Kawa palona Arabica</li>
+            <li>Kawa palona Robusta</li>
+            <li>Kawa bezkofeinowa</li>
+            <li id="l4">Kawa zielona</li>
+        </ol>
+    </div>
+
+    <div id=prawy>
+        Podaj numer kawy:<br>
+        <input type="number" id=kafa><br> Podaj wagę w dekagramach:<br>
+        <input type="number" id=waha><br>
+        <input type="button" onclick="tag()" value="Zamów">
+        <p id=wynig></p>
+    </div>
+
+
+    <script>
+        function tag() {
+            let kawa = document.getElementById("kafa").value;
+            let waga = document.getElementById("waha").value;
+            let wynik = 0;
+            if (kawa == 1) {
+                wynik = 5 * waga;
+            } else if (kawa == 2) {
+                wynik = 7 * waga;
+            } else if (kawa == 3) {
+                wynik = 6 * waga;
+            } else {
+                wynik = 0;
+            }
+            document.getElementById("wynig").innerHTML = wynik + " zł";
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id=stopka>
+        Stronę przygotował:
+        <B> - Mateusz Śledź</B>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+body {
+    background-color: #333333;
+    color: white;
+}
+input{
+    background-color: #333333;
+    color: white;
+    text-align:center;
+    height: 30px;
+}
+
+#di1{
+text-align: center;
+width: 400px;
+height:300px;
+float: center;
+margin-left: auto;
+margin-right:auto;
+clear:both
+}
+#di2{
+    text-align: center;
+    width: 400px;
+    height:300px;
+    float: center;
+    margin-left: auto;
+    margin-right:auto;
+    clear:both
+    }
+#di3{
+        text-align: center;
+        width: 400px;
+        float: center;
+        height:300px;
+        margin-left: auto;
+        margin-right:auto;
+        clear:both
+ }
+
+.button{
+    background-color:#666666;
+    height: 30px;
+    width:150px;
+}
